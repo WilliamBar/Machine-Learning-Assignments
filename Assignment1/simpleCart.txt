@@ -1,0 +1,95 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.SimpleCart -S 1 -M 2.0 -N 5 -C 1.0
+Relation:     arrhythmia-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.ReplaceMissingValues
+Instances:    452
+Attributes:   280
+              [list of attributes omitted]
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+CART Decision Tree
+
+224 < 0.95
+|  277 < 0.35
+|  |  257 < -0.55: 2(22.0/5.0)
+|  |  257 >= -0.55
+|  |  |  QRS duration < 129.0
+|  |  |  |  76 < 28.0
+|  |  |  |  |  112 < 30.0
+|  |  |  |  |  |  176 < 0.75: 2(6.0/6.0)
+|  |  |  |  |  |  176 >= 0.75: 1(11.0/7.0)
+|  |  |  |  |  112 >= 30.0: 3(6.0/1.0)
+|  |  |  |  76 >= 28.0: 4(10.0/4.0)
+|  |  |  QRS duration >= 129.0: 9(7.0/0.0)
+|  277 >= 0.35
+|  |  Heart Rate < 58.5: 6(22.0/8.0)
+|  |  Heart Rate >= 58.5
+|  |  |  112 < 22.0
+|  |  |  |  Heart Rate < 101.5
+|  |  |  |  |  237 < -0.95: 10(6.0/1.0)
+|  |  |  |  |  237 >= -0.95: 1(223.0/42.0)
+|  |  |  |  Heart Rate >= 101.5: 5(7.0/0.0)
+|  |  |  112 >= 22.0: 3(9.0/7.0)
+224 >= 0.95: 10(31.0/11.0)
+
+Number of Leaf Nodes: 12
+
+Size of the Tree: 23
+
+Time taken to build model: 3.53 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         324               71.6814 %
+Incorrectly Classified Instances       128               28.3186 %
+Kappa statistic                          0.549
+K&B Relative Info Score              20304.3035 %
+K&B Information Score                  505.6634 bits      1.1187 bits/instance
+Class complexity | order 0            1088.6585 bits      2.4085 bits/instance
+Class complexity | scheme            34897.9677 bits     77.2079 bits/instance
+Complexity improvement     (Sf)     -33809.3092 bits    -74.7994 bits/instance
+Mean absolute error                      0.0631
+Root mean squared error                  0.1901
+Relative absolute error                 59.9956 %
+Root relative squared error             83.3825 %
+Coverage of cases (0.95 level)          89.3805 %
+Mean rel. region size (0.95 level)      33.9006 %
+Total Number of Instances              452
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.636     0.008     8
+                 0.840    0.016    0.750      0.840    0.792      0.781    0.891     0.614     6
+                 0.640    0.042    0.653      0.640    0.646      0.603    0.807     0.472     10
+                 0.890    0.338    0.757      0.890    0.818      0.572    0.799     0.751     1
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.422     0.006     7
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.348     0.008     14
+                 0.800    0.023    0.545      0.800    0.649      0.647    0.943     0.466     3
+                 0.000    0.005    0.000      0.000    0.000      -0.015   0.546     0.104     16
+                 0.477    0.037    0.583      0.477    0.525      0.482    0.785     0.482     2
+                 0.533    0.009    0.667      0.533    0.593      0.584    0.787     0.373     4
+                 0.308    0.007    0.571      0.308    0.400      0.407    0.659     0.249     5
+                 0.889    0.000    1.000      0.889    0.941      0.942    0.917     0.891     9
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.332     0.012     15
+Weighted Avg.    0.717    0.194    0.657      0.717    0.681      0.537    0.782     0.598
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   k   l   m   <-- classified as
+   0   0   0   2   0   0   0   0   0   0   0   0   0 |   a = 8
+   0  21   1   2   0   0   1   0   0   0   0   0   0 |   b = 6
+   0   2  32  15   0   0   1   0   0   0   0   0   0 |   c = 10
+   0   3   8 218   0   0   1   1  10   1   3   0   0 |   d = 1
+   0   0   0   2   0   0   1   0   0   0   0   0   0 |   e = 7
+   0   0   1   2   0   0   0   0   1   0   0   0   0 |   f = 14
+   0   0   0   2   0   0  12   1   0   0   0   0   0 |   g = 3
+   0   2   3  12   0   0   1   0   3   1   0   0   0 |   h = 16
+   0   0   1  19   0   0   2   0  21   1   0   0   0 |   i = 2
+   0   0   0   7   0   0   0   0   0   8   0   0   0 |   j = 4
+   0   0   1   6   0   0   2   0   0   0   4   0   0 |   k = 5
+   0   0   0   1   0   0   0   0   0   0   0   8   0 |   l = 9
+   0   0   2   0   0   0   1   0   1   1   0   0   0 |   m = 15

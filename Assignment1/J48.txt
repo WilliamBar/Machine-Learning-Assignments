@@ -1,0 +1,824 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     arrhythmia
+Instances:    452
+Attributes:   280
+              [list of attributes omitted]
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+52 <= 92
+|   241 <= -2.5
+|   |   222 <= 0.9
+|   |   |   276 <= 0.1: 6 (2.0/1.0)
+|   |   |   276 > 0.1: 3 (15.0)
+|   |   222 > 0.9: 16 (3.0/1.0)
+|   241 > -2.5
+|   |   Heart Rate <= 58
+|   |   |   91 <= 32
+|   |   |   |   34 = 0
+|   |   |   |   |   193 <= -7.2: 1 (2.0)
+|   |   |   |   |   193 > -7.2
+|   |   |   |   |   |   210 <= -0.8: 10 (2.0/1.0)
+|   |   |   |   |   |   210 > -0.8
+|   |   |   |   |   |   |   192 <= 1.7: 6 (26.09/2.09)
+|   |   |   |   |   |   |   192 > 1.7: 1 (2.0/1.0)
+|   |   |   |   34 = 1: 10 (2.0/1.0)
+|   |   |   91 > 32: 10 (3.0)
+|   |   Heart Rate > 58
+|   |   |   Heart Rate <= 101
+|   |   |   |   224 <= 0.9
+|   |   |   |   |   171 <= -1.4
+|   |   |   |   |   |   sex = 0
+|   |   |   |   |   |   |   P-R interval <= 136
+|   |   |   |   |   |   |   |   Number of intrinsic deflections <= 32: 2 (3.0/1.0)
+|   |   |   |   |   |   |   |   Number of intrinsic deflections > 32: 1 (2.0/1.0)
+|   |   |   |   |   |   |   P-R interval > 136: 4 (11.0)
+|   |   |   |   |   |   sex = 1: 16 (3.0/1.0)
+|   |   |   |   |   171 > -1.4
+|   |   |   |   |   |   257 <= -0.5
+|   |   |   |   |   |   |   65 <= 76: 2 (24.0/1.0)
+|   |   |   |   |   |   |   65 > 76: 1 (2.0)
+|   |   |   |   |   |   257 > -0.5
+|   |   |   |   |   |   |   237 <= -1: 10 (7.0/1.0)
+|   |   |   |   |   |   |   237 > -1
+|   |   |   |   |   |   |   |   90 <= 76
+|   |   |   |   |   |   |   |   |   76 <= 32
+|   |   |   |   |   |   |   |   |   |   Existence of diphasic derivation of P wave = 0
+|   |   |   |   |   |   |   |   |   |   |   254 <= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   57 <= 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   35 = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   80 <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   103 <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   210 <= -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   33 <= 40: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   33 > 40: 2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   210 > -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   197 <= -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Q-T interval <= 324
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   77 <= 36: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   77 > 36: 5 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Q-T interval > 324
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   69 <= 44: 1 (202.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   69 > 44
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   81 <= 32: 16 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   81 > 32: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   197 > -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   47 = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   206 <= -0.3: 2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   206 > -0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   247 <= 0.7: 2 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   247 > 0.7: 1 (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   47 = 1: 16 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   103 > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   81 <= 24: 16 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   81 > 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   197 <= -1.6: 10 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   197 > -1.6: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   80 > 0: 16 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   35 = 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   117 <= 32: 16 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   117 > 32: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   57 > 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   P-R interval <= 155: 10 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   P-R interval > 155: 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   254 > 0.5: 10 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   Existence of diphasic derivation of P wave = 1: 10 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   76 > 32
+|   |   |   |   |   |   |   |   |   |   31 <= 8
+|   |   |   |   |   |   |   |   |   |   |   138 <= 48: 4 (4.88/0.88)
+|   |   |   |   |   |   |   |   |   |   |   138 > 48: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   31 > 8: 8 (2.0/1.0)
+|   |   |   |   |   |   |   |   90 > 76: 8 (3.0/2.0)
+|   |   |   |   224 > 0.9
+|   |   |   |   |   RQST <= 75
+|   |   |   |   |   |   186 <= -0.5: 2 (2.0)
+|   |   |   |   |   |   186 > -0.5
+|   |   |   |   |   |   |   height <= 176: 10 (28.0/1.0)
+|   |   |   |   |   |   |   height > 176: 1 (2.0)
+|   |   |   |   |   RQST > 75: 16 (3.0/1.0)
+|   |   |   Heart Rate > 101
+|   |   |   |   270 <= -0.8
+|   |   |   |   |   sex = 0: 10 (2.0)
+|   |   |   |   |   sex = 1: 15 (2.0)
+|   |   |   |   270 > -0.8: 5 (10.03/0.03)
+52 > 92: 9 (8.0)
+
+Number of Leaves  : 	49
+
+Size of the tree : 	97
+
+
+Time taken to build model: 1.13 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         304               67.2566 %
+Incorrectly Classified Instances       148               32.7434 %
+Kappa statistic                          0.5019
+K&B Relative Info Score              20549.0498 %
+K&B Information Score                  511.7586 bits      1.1322 bits/instance
+Class complexity | order 0            1088.6585 bits      2.4085 bits/instance
+Class complexity | scheme           118388.4001 bits    261.9212 bits/instance
+Complexity improvement     (Sf)    -117299.7416 bits   -259.5127 bits/instance
+Mean absolute error                      0.0559
+Root mean squared error                  0.2158
+Relative absolute error                 53.1588 %
+Root relative squared error             94.6358 %
+Coverage of cases (0.95 level)          69.0265 %
+Mean rel. region size (0.95 level)      11.8958 %
+Total Number of Instances              452     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.007    0.000      0.000    0.000      -0.005   0.494     0.004     8
+                 0.640    0.023    0.615      0.640    0.627      0.605    0.845     0.487     6
+                 0.520    0.060    0.520      0.520    0.520      0.460    0.652     0.311     10
+                 0.849    0.261    0.794      0.849    0.821      0.594    0.770     0.717     1
+                 0.000    0.002    0.000      0.000    0.000      -0.004   0.267     0.007     7
+                 0.000    0.018    0.000      0.000    0.000      -0.013   0.484     0.009     14
+                 0.867    0.007    0.813      0.867    0.839      0.833    0.931     0.759     3
+                 0.045    0.040    0.056      0.045    0.050      0.007    0.349     0.046     16
+                 0.432    0.042    0.528      0.432    0.475      0.427    0.634     0.281     2
+                 0.600    0.007    0.750      0.600    0.667      0.661    0.830     0.429     4
+                 0.462    0.007    0.667      0.462    0.545      0.544    0.749     0.381     5
+                 0.667    0.009    0.600      0.667    0.632      0.625    0.829     0.407     9
+                 0.000    0.002    0.000      0.000    0.000      -0.005   0.572     0.022     15
+Weighted Avg.    0.673    0.156    0.659      0.673    0.664      0.526    0.726     0.539     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   k   l   m   <-- classified as
+   0   0   0   2   0   0   0   0   0   0   0   0   0 |   a = 8
+   0  16   2   3   0   0   1   3   0   0   0   0   0 |   b = 6
+   0   2  26  12   0   3   0   4   1   1   1   0   0 |   c = 10
+   1   3  10 208   0   2   0   8  10   0   1   2   0 |   d = 1
+   1   0   0   1   0   0   0   1   0   0   0   0   0 |   e = 7
+   0   0   0   2   0   0   0   0   2   0   0   0   0 |   f = 14
+   0   1   0   1   0   0  13   0   0   0   0   0   0 |   g = 3
+   1   2   4   8   1   1   1   1   2   0   0   1   0 |   h = 16
+   0   1   4  16   0   1   0   1  19   1   0   1   0 |   i = 2
+   0   0   1   4   0   0   0   0   1   9   0   0   0 |   j = 4
+   0   0   0   4   0   1   0   0   1   0   6   0   1 |   k = 5
+   0   1   1   1   0   0   0   0   0   0   0   6   0 |   l = 9
+   0   0   2   0   0   0   1   0   0   1   1   0   0 |   m = 15
+
+=== Source code ===
+
+// Generated with Weka 3.7.9
+//
+// This code is public domain and comes with no warranty.
+//
+// Timestamp: Sun Sep 01 18:54:13 IST 2013
+
+package weka.classifiers;
+
+import weka.core.Attribute;
+import weka.core.Capabilities;
+import weka.core.Capabilities.Capability;
+import weka.core.Instance;
+import weka.core.Instances;
+import weka.core.RevisionUtils;
+import weka.classifiers.Classifier;
+import weka.classifiers.AbstractClassifier;
+
+public class WekaWrapper
+  extends AbstractClassifier {
+
+  /**
+   * Returns only the toString() method.
+   *
+   * @return a string describing the classifier
+   */
+  public String globalInfo() {
+    return toString();
+  }
+
+  /**
+   * Returns the capabilities of this classifier.
+   *
+   * @return the capabilities
+   */
+  public Capabilities getCapabilities() {
+    weka.core.Capabilities result = new weka.core.Capabilities(this);
+
+    result.enable(weka.core.Capabilities.Capability.NOMINAL_ATTRIBUTES);
+    result.enable(weka.core.Capabilities.Capability.NUMERIC_ATTRIBUTES);
+    result.enable(weka.core.Capabilities.Capability.DATE_ATTRIBUTES);
+    result.enable(weka.core.Capabilities.Capability.MISSING_VALUES);
+    result.enable(weka.core.Capabilities.Capability.NOMINAL_CLASS);
+    result.enable(weka.core.Capabilities.Capability.MISSING_CLASS_VALUES);
+
+
+    result.setMinimumNumberInstances(0);
+
+    return result;
+  }
+
+  /**
+   * only checks the data against its capabilities.
+   *
+   * @param i the training data
+   */
+  public void buildClassifier(Instances i) throws Exception {
+    // can classifier handle the data?
+    getCapabilities().testWithFail(i);
+  }
+
+  /**
+   * Classifies the given instance.
+   *
+   * @param i the instance to classify
+   * @return the classification result
+   */
+  public double classifyInstance(Instance i) throws Exception {
+    Object[] s = new Object[i.numAttributes()];
+    
+    for (int j = 0; j < s.length; j++) {
+      if (!i.isMissing(j)) {
+        if (i.attribute(j).isNominal())
+          s[j] = new String(i.stringValue(j));
+        else if (i.attribute(j).isNumeric())
+          s[j] = new Double(i.value(j));
+      }
+    }
+    
+    // set class value to missing
+    s[i.classIndex()] = null;
+    
+    return J48.classify(s);
+  }
+
+  /**
+   * Returns the revision string.
+   * 
+   * @return        the revision
+   */
+  public String getRevision() {
+    return RevisionUtils.extract("1.0");
+  }
+
+  /**
+   * Returns only the classnames and what classifier it is based on.
+   *
+   * @return a short description
+   */
+  public String toString() {
+    return "Auto-generated classifier wrapper, based on weka.classifiers.trees.J48 (generated with Weka 3.7.9).\n" + this.getClass().getName() + "/J48";
+  }
+
+  /**
+   * Runs the classfier from commandline.
+   *
+   * @param args the commandline arguments
+   */
+  public static void main(String args[]) {
+    runClassifier(new WekaWrapper(), args);
+  }
+}
+
+class J48 {
+
+  public static double classify(Object[] i)
+    throws Exception {
+
+    double p = Double.NaN;
+    p = J48.Nadc576c2771(i);
+    return p;
+  }
+  static double Nadc576c2771(Object []i) {
+    double p = Double.NaN;
+    if (i[51] == null) {
+      p = 3;
+    } else if (((Double) i[51]).doubleValue() <= 92.0) {
+    p = J48.N7ef79062772(i);
+    } else if (((Double) i[51]).doubleValue() > 92.0) {
+      p = 11;
+    } 
+    return p;
+  }
+  static double N7ef79062772(Object []i) {
+    double p = Double.NaN;
+    if (i[240] == null) {
+      p = 6;
+    } else if (((Double) i[240]).doubleValue() <= -2.5) {
+    p = J48.N7af27cfb2773(i);
+    } else if (((Double) i[240]).doubleValue() > -2.5) {
+    p = J48.N68969bf02775(i);
+    } 
+    return p;
+  }
+  static double N7af27cfb2773(Object []i) {
+    double p = Double.NaN;
+    if (i[221] == null) {
+      p = 6;
+    } else if (((Double) i[221]).doubleValue() <= 0.9) {
+    p = J48.N45eb81cc2774(i);
+    } else if (((Double) i[221]).doubleValue() > 0.9) {
+      p = 7;
+    } 
+    return p;
+  }
+  static double N45eb81cc2774(Object []i) {
+    double p = Double.NaN;
+    if (i[275] == null) {
+      p = 1;
+    } else if (((Double) i[275]).doubleValue() <= 0.1) {
+      p = 1;
+    } else if (((Double) i[275]).doubleValue() > 0.1) {
+      p = 6;
+    } 
+    return p;
+  }
+  static double N68969bf02775(Object []i) {
+    double p = Double.NaN;
+    if (i[14] == null) {
+      p = 1;
+    } else if (((Double) i[14]).doubleValue() <= 58.0) {
+    p = J48.N77d7df342776(i);
+    } else if (((Double) i[14]).doubleValue() > 58.0) {
+    p = J48.N74fabf6f2781(i);
+    } 
+    return p;
+  }
+  static double N77d7df342776(Object []i) {
+    double p = Double.NaN;
+    if (i[90] == null) {
+      p = 1;
+    } else if (((Double) i[90]).doubleValue() <= 32.0) {
+    p = J48.N7d7f0c632777(i);
+    } else if (((Double) i[90]).doubleValue() > 32.0) {
+      p = 2;
+    } 
+    return p;
+  }
+  static double N7d7f0c632777(Object []i) {
+    double p = Double.NaN;
+    if (i[33] == null) {
+      p = 1;
+    } else if (i[33].equals("0")) {
+    p = J48.N200677f32778(i);
+    } else if (i[33].equals("1")) {
+      p = 2;
+    } 
+    return p;
+  }
+  static double N200677f32778(Object []i) {
+    double p = Double.NaN;
+    if (i[192] == null) {
+      p = 3;
+    } else if (((Double) i[192]).doubleValue() <= -7.2) {
+      p = 3;
+    } else if (((Double) i[192]).doubleValue() > -7.2) {
+    p = J48.N8ad02f22779(i);
+    } 
+    return p;
+  }
+  static double N8ad02f22779(Object []i) {
+    double p = Double.NaN;
+    if (i[209] == null) {
+      p = 2;
+    } else if (((Double) i[209]).doubleValue() <= -0.8) {
+      p = 2;
+    } else if (((Double) i[209]).doubleValue() > -0.8) {
+    p = J48.N169c62512780(i);
+    } 
+    return p;
+  }
+  static double N169c62512780(Object []i) {
+    double p = Double.NaN;
+    if (i[191] == null) {
+      p = 1;
+    } else if (((Double) i[191]).doubleValue() <= 1.7) {
+      p = 1;
+    } else if (((Double) i[191]).doubleValue() > 1.7) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N74fabf6f2781(Object []i) {
+    double p = Double.NaN;
+    if (i[14] == null) {
+      p = 3;
+    } else if (((Double) i[14]).doubleValue() <= 101.0) {
+    p = J48.N7a2e4c682782(i);
+    } else if (((Double) i[14]).doubleValue() > 101.0) {
+    p = J48.N4509535d2817(i);
+    } 
+    return p;
+  }
+  static double N7a2e4c682782(Object []i) {
+    double p = Double.NaN;
+    if (i[223] == null) {
+      p = 3;
+    } else if (((Double) i[223]).doubleValue() <= 0.9) {
+    p = J48.N759a7e822783(i);
+    } else if (((Double) i[223]).doubleValue() > 0.9) {
+    p = J48.N2f58f54d2814(i);
+    } 
+    return p;
+  }
+  static double N759a7e822783(Object []i) {
+    double p = Double.NaN;
+    if (i[170] == null) {
+      p = 9;
+    } else if (((Double) i[170]).doubleValue() <= -1.4) {
+    p = J48.N71e7c51f2784(i);
+    } else if (((Double) i[170]).doubleValue() > -1.4) {
+    p = J48.N2521324b2787(i);
+    } 
+    return p;
+  }
+  static double N71e7c51f2784(Object []i) {
+    double p = Double.NaN;
+    if (i[1] == null) {
+      p = 9;
+    } else if (i[1].equals("0")) {
+    p = J48.N273eb0a52785(i);
+    } else if (i[1].equals("1")) {
+      p = 7;
+    } 
+    return p;
+  }
+  static double N273eb0a52785(Object []i) {
+    double p = Double.NaN;
+    if (i[5] == null) {
+      p = 8;
+    } else if (((Double) i[5]).doubleValue() <= 136.0) {
+    p = J48.N4bf34c42786(i);
+    } else if (((Double) i[5]).doubleValue() > 136.0) {
+      p = 9;
+    } 
+    return p;
+  }
+  static double N4bf34c42786(Object []i) {
+    double p = Double.NaN;
+    if (i[20] == null) {
+      p = 8;
+    } else if (((Double) i[20]).doubleValue() <= 32.0) {
+      p = 8;
+    } else if (((Double) i[20]).doubleValue() > 32.0) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N2521324b2787(Object []i) {
+    double p = Double.NaN;
+    if (i[256] == null) {
+      p = 8;
+    } else if (((Double) i[256]).doubleValue() <= -0.5) {
+    p = J48.N266cecf82788(i);
+    } else if (((Double) i[256]).doubleValue() > -0.5) {
+    p = J48.N3939a17d2789(i);
+    } 
+    return p;
+  }
+  static double N266cecf82788(Object []i) {
+    double p = Double.NaN;
+    if (i[64] == null) {
+      p = 8;
+    } else if (((Double) i[64]).doubleValue() <= 76.0) {
+      p = 8;
+    } else if (((Double) i[64]).doubleValue() > 76.0) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N3939a17d2789(Object []i) {
+    double p = Double.NaN;
+    if (i[236] == null) {
+      p = 2;
+    } else if (((Double) i[236]).doubleValue() <= -1.0) {
+      p = 2;
+    } else if (((Double) i[236]).doubleValue() > -1.0) {
+    p = J48.N769932e42790(i);
+    } 
+    return p;
+  }
+  static double N769932e42790(Object []i) {
+    double p = Double.NaN;
+    if (i[89] == null) {
+      p = 3;
+    } else if (((Double) i[89]).doubleValue() <= 76.0) {
+    p = J48.N43dc53902791(i);
+    } else if (((Double) i[89]).doubleValue() > 76.0) {
+      p = 0;
+    } 
+    return p;
+  }
+  static double N43dc53902791(Object []i) {
+    double p = Double.NaN;
+    if (i[75] == null) {
+      p = 3;
+    } else if (((Double) i[75]).doubleValue() <= 32.0) {
+    p = J48.N35f235be2792(i);
+    } else if (((Double) i[75]).doubleValue() > 32.0) {
+    p = J48.N7cbeb4f2812(i);
+    } 
+    return p;
+  }
+  static double N35f235be2792(Object []i) {
+    double p = Double.NaN;
+    if (i[24] == null) {
+      p = 3;
+    } else if (i[24].equals("0")) {
+    p = J48.N30a6689d2793(i);
+    } else if (i[24].equals("1")) {
+      p = 2;
+    } 
+    return p;
+  }
+  static double N30a6689d2793(Object []i) {
+    double p = Double.NaN;
+    if (i[253] == null) {
+      p = 3;
+    } else if (((Double) i[253]).doubleValue() <= 0.5) {
+    p = J48.N7d1e345e2794(i);
+    } else if (((Double) i[253]).doubleValue() > 0.5) {
+      p = 2;
+    } 
+    return p;
+  }
+  static double N7d1e345e2794(Object []i) {
+    double p = Double.NaN;
+    if (i[56] == null) {
+      p = 3;
+    } else if (((Double) i[56]).doubleValue() <= 72.0) {
+    p = J48.N4a00477e2795(i);
+    } else if (((Double) i[56]).doubleValue() > 72.0) {
+    p = J48.N7688afc52811(i);
+    } 
+    return p;
+  }
+  static double N4a00477e2795(Object []i) {
+    double p = Double.NaN;
+    if (i[34] == null) {
+      p = 3;
+    } else if (i[34].equals("0")) {
+    p = J48.N5855c7262796(i);
+    } else if (i[34].equals("1")) {
+    p = J48.N7c2d1fe32810(i);
+    } 
+    return p;
+  }
+  static double N5855c7262796(Object []i) {
+    double p = Double.NaN;
+    if (i[79] == null) {
+      p = 3;
+    } else if (((Double) i[79]).doubleValue() <= 0.0) {
+    p = J48.N6785bd182797(i);
+    } else if (((Double) i[79]).doubleValue() > 0.0) {
+      p = 7;
+    } 
+    return p;
+  }
+  static double N6785bd182797(Object []i) {
+    double p = Double.NaN;
+    if (i[102] == null) {
+      p = 3;
+    } else if (((Double) i[102]).doubleValue() <= 16.0) {
+    p = J48.N7d41a7c02798(i);
+    } else if (((Double) i[102]).doubleValue() > 16.0) {
+    p = J48.N5f71ff092808(i);
+    } 
+    return p;
+  }
+  static double N7d41a7c02798(Object []i) {
+    double p = Double.NaN;
+    if (i[209] == null) {
+      p = 8;
+    } else if (((Double) i[209]).doubleValue() <= -0.8) {
+    p = J48.N616c6e7e2799(i);
+    } else if (((Double) i[209]).doubleValue() > -0.8) {
+    p = J48.N15ca442a2800(i);
+    } 
+    return p;
+  }
+  static double N616c6e7e2799(Object []i) {
+    double p = Double.NaN;
+    if (i[32] == null) {
+      p = 3;
+    } else if (((Double) i[32]).doubleValue() <= 40.0) {
+      p = 3;
+    } else if (((Double) i[32]).doubleValue() > 40.0) {
+      p = 8;
+    } 
+    return p;
+  }
+  static double N15ca442a2800(Object []i) {
+    double p = Double.NaN;
+    if (i[196] == null) {
+      p = 3;
+    } else if (((Double) i[196]).doubleValue() <= -0.6) {
+    p = J48.N12412c932801(i);
+    } else if (((Double) i[196]).doubleValue() > -0.6) {
+    p = J48.N67168e352805(i);
+    } 
+    return p;
+  }
+  static double N12412c932801(Object []i) {
+    double p = Double.NaN;
+    if (i[6] == null) {
+      p = 3;
+    } else if (((Double) i[6]).doubleValue() <= 324.0) {
+    p = J48.N74d570412802(i);
+    } else if (((Double) i[6]).doubleValue() > 324.0) {
+    p = J48.N68bcf7532803(i);
+    } 
+    return p;
+  }
+  static double N74d570412802(Object []i) {
+    double p = Double.NaN;
+    if (i[76] == null) {
+      p = 3;
+    } else if (((Double) i[76]).doubleValue() <= 36.0) {
+      p = 3;
+    } else if (((Double) i[76]).doubleValue() > 36.0) {
+      p = 10;
+    } 
+    return p;
+  }
+  static double N68bcf7532803(Object []i) {
+    double p = Double.NaN;
+    if (i[68] == null) {
+      p = 3;
+    } else if (((Double) i[68]).doubleValue() <= 44.0) {
+      p = 3;
+    } else if (((Double) i[68]).doubleValue() > 44.0) {
+    p = J48.N4e119fdd2804(i);
+    } 
+    return p;
+  }
+  static double N4e119fdd2804(Object []i) {
+    double p = Double.NaN;
+    if (i[80] == null) {
+      p = 7;
+    } else if (((Double) i[80]).doubleValue() <= 32.0) {
+      p = 7;
+    } else if (((Double) i[80]).doubleValue() > 32.0) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N67168e352805(Object []i) {
+    double p = Double.NaN;
+    if (i[46] == null) {
+      p = 3;
+    } else if (i[46].equals("0")) {
+    p = J48.N79d26e722806(i);
+    } else if (i[46].equals("1")) {
+      p = 7;
+    } 
+    return p;
+  }
+  static double N79d26e722806(Object []i) {
+    double p = Double.NaN;
+    if (i[205] == null) {
+      p = 8;
+    } else if (((Double) i[205]).doubleValue() <= -0.3) {
+      p = 8;
+    } else if (((Double) i[205]).doubleValue() > -0.3) {
+    p = J48.N66513cd92807(i);
+    } 
+    return p;
+  }
+  static double N66513cd92807(Object []i) {
+    double p = Double.NaN;
+    if (i[246] == null) {
+      p = 8;
+    } else if (((Double) i[246]).doubleValue() <= 0.7) {
+      p = 8;
+    } else if (((Double) i[246]).doubleValue() > 0.7) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N5f71ff092808(Object []i) {
+    double p = Double.NaN;
+    if (i[80] == null) {
+      p = 7;
+    } else if (((Double) i[80]).doubleValue() <= 24.0) {
+      p = 7;
+    } else if (((Double) i[80]).doubleValue() > 24.0) {
+    p = J48.N351ed8d32809(i);
+    } 
+    return p;
+  }
+  static double N351ed8d32809(Object []i) {
+    double p = Double.NaN;
+    if (i[196] == null) {
+      p = 2;
+    } else if (((Double) i[196]).doubleValue() <= -1.6) {
+      p = 2;
+    } else if (((Double) i[196]).doubleValue() > -1.6) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N7c2d1fe32810(Object []i) {
+    double p = Double.NaN;
+    if (i[116] == null) {
+      p = 7;
+    } else if (((Double) i[116]).doubleValue() <= 32.0) {
+      p = 7;
+    } else if (((Double) i[116]).doubleValue() > 32.0) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N7688afc52811(Object []i) {
+    double p = Double.NaN;
+    if (i[5] == null) {
+      p = 2;
+    } else if (((Double) i[5]).doubleValue() <= 155.0) {
+      p = 2;
+    } else if (((Double) i[5]).doubleValue() > 155.0) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N7cbeb4f2812(Object []i) {
+    double p = Double.NaN;
+    if (i[30] == null) {
+      p = 9;
+    } else if (((Double) i[30]).doubleValue() <= 8.0) {
+    p = J48.N5cc593882813(i);
+    } else if (((Double) i[30]).doubleValue() > 8.0) {
+      p = 0;
+    } 
+    return p;
+  }
+  static double N5cc593882813(Object []i) {
+    double p = Double.NaN;
+    if (i[137] == null) {
+      p = 9;
+    } else if (((Double) i[137]).doubleValue() <= 48.0) {
+      p = 9;
+    } else if (((Double) i[137]).doubleValue() > 48.0) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N2f58f54d2814(Object []i) {
+    double p = Double.NaN;
+    if (i[12] == null) {
+      p = 2;
+    } else if (((Double) i[12]).doubleValue() <= 75.0) {
+    p = J48.N7950aa832815(i);
+    } else if (((Double) i[12]).doubleValue() > 75.0) {
+      p = 7;
+    } 
+    return p;
+  }
+  static double N7950aa832815(Object []i) {
+    double p = Double.NaN;
+    if (i[185] == null) {
+      p = 8;
+    } else if (((Double) i[185]).doubleValue() <= -0.5) {
+      p = 8;
+    } else if (((Double) i[185]).doubleValue() > -0.5) {
+    p = J48.N1eeabcae2816(i);
+    } 
+    return p;
+  }
+  static double N1eeabcae2816(Object []i) {
+    double p = Double.NaN;
+    if (i[2] == null) {
+      p = 2;
+    } else if (((Double) i[2]).doubleValue() <= 176.0) {
+      p = 2;
+    } else if (((Double) i[2]).doubleValue() > 176.0) {
+      p = 3;
+    } 
+    return p;
+  }
+  static double N4509535d2817(Object []i) {
+    double p = Double.NaN;
+    if (i[269] == null) {
+      p = 2;
+    } else if (((Double) i[269]).doubleValue() <= -0.8) {
+    p = J48.N674022132818(i);
+    } else if (((Double) i[269]).doubleValue() > -0.8) {
+      p = 10;
+    } 
+    return p;
+  }
+  static double N674022132818(Object []i) {
+    double p = Double.NaN;
+    if (i[1] == null) {
+      p = 2;
+    } else if (i[1].equals("0")) {
+      p = 2;
+    } else if (i[1].equals("1")) {
+      p = 12;
+    } 
+    return p;
+  }
+}
