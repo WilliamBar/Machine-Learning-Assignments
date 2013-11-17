@@ -1,0 +1,7 @@
+python2 knn.py
+/usr/lib/python2.7/site-packages/sklearn/neighbors/classification.py:131: NeighborsWarning: kneighbors: neighbor k+1 and neighbor k have the same distance: results will be dependent on data order.
+  neigh_dist, neigh_ind = self.kneighbors(X)
+[ 0.97871429  0.97657143  0.97685714  0.97371429  0.97442857  0.973
+  0.97528571  0.973       0.97485714  0.97257143]
+0.9749
+python2 knn.py  14353.49s user 22.01s system 100% cpu 3:59:32.25 total
